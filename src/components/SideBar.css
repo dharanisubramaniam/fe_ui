@@ -1,0 +1,20 @@
+.sidebar {
+  height: 100vh;
+  flex: 0.2;
+  background-color: #bce0fd;
+}
+.sidebar__allcourses {
+  font-family: "Roboto", sans-serif;
+  color: #2699fb;
+  font-weight: 700;
+  padding-top: 50px;
+  margin: 5px;
+  padding: 20px 10px 10px 10px;
+}
+.sidebar__category {
+  margin: 5px;
+  padding: 10px 10px 10px 20px;
+  font-family: "Roboto", sans-serif;
+  color: #2699fb;
+  font-weight: 500;
+}

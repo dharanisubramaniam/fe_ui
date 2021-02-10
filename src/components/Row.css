@@ -1,0 +1,48 @@
+.row {
+  border: 1px solid #2699fb;
+  max-height: 300px;
+  max-width: 220px;
+  margin-left: 20px;
+}
+
+.row__image {
+  width: 220px;
+  height: 150px;
+  object-fit: cover;
+  display: block;
+  
+}
+.row__difficultyIcon {
+  height: 8px;
+  width: 40px;
+  border: 2px solid #2699fb;
+  border-radius: 5px;
+  display: inline-block;
+  margin: 5px;
+}
+.row__details{
+    background-color: #bce0fd;
+    display: inline-block;
+}
+
+.row__details > span.row__amount {
+    font-size: 0.9rem;
+    
+}
+.row__details > span{
+    float: right;
+    font-size: 0.7rem;
+    padding: 5px 5px;
+}
+
+.row__details > h3 {
+    font-weight: 800;
+    font-size:0.9rem;
+    padding-left: 5px;
+}
+.row__studentsDetails{
+    font-size:0.7rem;
+    display: inline-block;
+    padding:10px 5px;
+    margin-bottom: 5px;
+}

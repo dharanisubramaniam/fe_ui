@@ -1,0 +1,82 @@
+.coursehome{
+    margin-left: 250px;
+    max-width:1000px;
+    font-family: "Roboto", sans-serif;
+    color: #2699fb;
+}
+
+.coursehome__thumbnail{
+   height: 500px;
+   width:1000px;
+   
+}
+
+.coursehome__thumbnail >img {
+    height: 500px;
+    width: 1000px;
+    object-fit: cover;
+}
+
+.coursehome__description {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+    max-height: 350px;
+    margin-top:30px;
+}
+
+.coursehome__desc1 > h3 {
+    font-weight: 600;
+    padding: 15px 20px;
+}
+
+.coursehome__desc1 > p{
+    padding : 20px;
+    font-size: 0.9rem;
+    font-weight:100;
+}
+
+.coursehome__desc2 {
+    max-height: 300px;
+    display: flex;
+    flex-direction: column;
+    
+}
+.coursehome__desc2Box{
+     display: flex;
+     flex-wrap: wrap;
+     margin: 30px 50px 0px 50px;
+}
+.coursehome__desc2Boxes {
+    height: 85px;
+    width: 85px;
+    margin: 10px 10px;
+    background-color: #BCE0FD;
+     text-align: center;
+}
+.coursehome__desc2Boxes > p {
+    padding-top: 15px;
+    font-size:0.7rem;
+    font-weight: 600;
+}
+.coursehome__desc2Enroll {
+    margin: 20px 50px;
+    
+}
+.coursehome__desc2EnrollFree {
+    text-decoration: none;
+    color:#2699fb;
+    font-weight: 600;
+    font-size: 1.2rem;
+    padding-left: 20px;
+    
+}
+.coursehome__desc2EnrollLink {
+    background-color: #2699fb;
+    color:white;
+    text-decoration: none;
+    border-radius: 5px;
+    padding: 5px 20px;
+    margin: 0px 20px;
+
+}

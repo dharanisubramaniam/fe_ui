@@ -1,0 +1,61 @@
+.header {
+  height: 75px;
+  max-width: 100%;
+  display: flex;
+  background-color: rgba(38, 153, 251, 255);
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  color: white;
+  align-items: center;
+}
+
+.header__logo {
+  font-size: 1.3rem;
+  flex: 1;
+  margin-left: 2rem;
+}
+
+.header__logo > span {
+  float: right;
+}
+
+.header__menuContainer {
+  flex: 3;
+}
+
+.header__signInContainer {
+  flex: 1;
+  overflow: auto;
+  
+}
+
+.header__menu {
+  list-style-type: none;
+  display: flex;
+  float: right;
+}
+
+.header__menu > li {
+  margin: 0rem 1rem;
+}
+
+nav a {
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  color: white;
+}
+
+.header__signOption {
+  margin-left: 1.5rem;
+  border: 2px solid white;
+  background-color: rgba(38, 153, 251, 255);
+  border-radius: 0.25rem;
+  font-family: "Roboto", sans-serif;
+  color: white;
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1.8;
+  padding: 0.25rem 0.5rem;
+  cursor: pointer;
+}
