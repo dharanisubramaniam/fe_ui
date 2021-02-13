@@ -1,20 +1,47 @@
 .coursehome{
-    margin-left: 250px;
+    position: absolute;
+    left: 17%;
     max-width:1000px;
     font-family: "Roboto", sans-serif;
     color: #2699fb;
 }
 
 .coursehome__thumbnail{
-   height: 500px;
-   width:1000px;
-   
+   margin-top: 30px;
+   max-height: auto;
+   max-width:1000px;
+   position:relative;
+   color: white;
 }
 
 .coursehome__thumbnail >img {
-    height: 500px;
-    width: 1000px;
+    height: auto;
+    max-width: 100%;
     object-fit: cover;
+}
+
+.coursehome__playerDesc {
+   position: absolute;
+   left: 8%;
+   top: 28%;
+}
+
+.coursehome__playerDesc > h2 {
+    margin:10px;
+    font-weight: 500;
+}
+.coursehome__playerDesc > p {
+   margin: 30px 0px 30px 10px;
+    width: 250px;
+}
+.coursehome__playIconContainer {
+    position: absolute;
+    top: 40%;
+    left: 48%;
+}
+.coursehome__playerIcon {
+    font-size: 3.5rem !important;
+    color: white;
 }
 
 .coursehome__description {
@@ -79,4 +106,70 @@
     padding: 5px 20px;
     margin: 0px 20px;
 
+}
+
+
+.coursehome__skills {
+    max-width: 45%;
+}
+.coursehome__skills > h3 {
+    font-weight: 600;
+    padding: 15px 20px;
+}
+
+.coursehome__skillsCovered {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 15px;
+}
+
+.coursehome__skillsCovered > p {
+    padding: 10px 30px;
+    background-color: #BCE0FD;
+    color: #2699fb;
+    margin:10px;
+    border-radius: 5px;
+}
+
+.coursehome__courseOverview > h3 {
+     font-weight: 600;
+    padding: 15px 20px;
+}
+.coursehome__lesson {
+    display: flex;
+    justify-content:space-between;
+    max-width: 60%;
+    margin: 15px 0px 15px 80px;
+    font-weight: 600;
+}
+.coursehome__studentsWorks > h3 {
+    font-weight: 600;
+    padding: 15px 20px; 
+    text-align: center;
+}
+.coursehome__studentsWork {
+    display: flex;
+    justify-content: space-around;
+    height: 250px;
+    padding: 20px 120px;
+    
+}
+.coursehome__studentsWorkRows {
+    border: 2px solid #BCE0FD;
+    width: 230px;
+    height: 230px;
+}
+
+.coursehome__studentsWorkRows > p {
+    text-align: center;
+    margin-top: 100px;
+}
+.coursehome__dotIcons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.coursehome__dotIcon {
+    font-size: 0.5rem !important;
+    padding: 5px;
 }

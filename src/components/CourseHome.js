@@ -1,12 +1,29 @@
 import React from 'react';
 import img from "../images/coursehome.jpg";
-import './CourseHome.css'
+import './CourseHome.css';
+import PlayCircleFilledRoundedIcon from "@material-ui/icons/PlayCircleFilledRounded";
+import ArrowDropDownIcon from "@material-ui/icons/ArrowDropDown";
+import FiberManualRecordIcon from "@material-ui/icons/FiberManualRecord";
 
 function CourseHome() {
     return (
       <div className="coursehome">
         <div className="coursehome__thumbnail">
           <img src={img}></img>
+          <div className="coursehome__playerDesc">
+            <h2>VIDEO EDITING IN AFTEREFFECTS</h2>
+            <p>This video describes how to edit a video using AfterEffects</p>
+
+            <a href="#" className="coursehome__desc2EnrollFree">
+              Free
+            </a>
+            <a href="#" className="coursehome__desc2EnrollLink">
+              ENROLL
+            </a>
+          </div>
+          <div className="coursehome__playIconContainer">
+            <PlayCircleFilledRoundedIcon className="coursehome__playerIcon" />
+          </div>
         </div>
         <div className="coursehome__description">
           <div className="coursehome__desc1">
@@ -60,9 +77,57 @@ function CourseHome() {
             </div>
           </div>
         </div>
-        <div>
+        <div className="coursehome__skills">
           <h3>Skills covered</h3>
-          <div></div>
+          <div className="coursehome__skillsCovered">
+            <p>SKILL 1</p>
+            <p>SKILL 2</p>
+            <p>SKILL 3</p>
+            <p>SKILL 4</p>
+          </div>
+        </div>
+        <div className="coursehome__courseOverview">
+          <h3>Course Overview</h3>
+          <div className="coursehome__lesson">
+            <p>1. First lesson</p>
+            <ArrowDropDownIcon />
+          </div>
+          <div className="coursehome__lesson">
+            <p>2. Second lesson</p>
+            <ArrowDropDownIcon />
+          </div>
+          <div className="coursehome__lesson">
+            <p>3. Third lesson</p>
+            <ArrowDropDownIcon />
+          </div>
+          <div className="coursehome__lesson">
+            <p>4. Fourth lesson</p>
+            <ArrowDropDownIcon />
+          </div>
+          <div className="coursehome__lesson">
+            <p>5. Fifth lesson</p>
+            <ArrowDropDownIcon />
+          </div>
+        </div>
+        <div className="coursehome__studentsWorks">
+          <h3>Student's Works</h3>
+          <div className="coursehome__studentsWork">
+            <div className="coursehome__studentsWorkRows">
+              <p>Student 1 Work</p>
+            </div>
+            <div className="coursehome__studentsWorkRows">
+              <p>Student 2 Work</p>
+            </div>
+            <div className="coursehome__studentsWorkRows">
+              <p>Student 3 Work</p>
+            </div>
+          </div>
+        </div>
+        <div className="coursehome__dotIcons">
+          <FiberManualRecordIcon className="coursehome__dotIcon" />
+          <FiberManualRecordIcon className="coursehome__dotIcon" />
+          <FiberManualRecordIcon className="coursehome__dotIcon" />
+          <FiberManualRecordIcon className="coursehome__dotIcon" />
         </div>
       </div>
     );
