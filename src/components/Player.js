@@ -1,7 +1,7 @@
 import React, { useState, useRef } from "react";
 import ReactPlayer from "react-player";
 import { Button, Container, IconButton, Typography } from "@material-ui/core";
-import { makeStyles, withStyles } from "@material-ui/core/Styles";
+import { makeStyles, withStyles } from "@material-ui/core/styles";
 import PlayerControls from "./PlayerControls";
 import "./Player.css";
 import screenfull from "screenfull";
