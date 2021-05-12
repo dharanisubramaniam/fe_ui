@@ -27,7 +27,7 @@ function App() {
       }
     }
     fetchData();
-  }, []);
+  }, [dispatch]);
   useEffect(() => {
     async function fetchData() {
       try {
@@ -40,7 +40,7 @@ function App() {
       }
     }
     fetchData();
-  }, []);
+  }, [dispatch]);
   useEffect(() => {
     async function fetchData() {
       try {
@@ -52,7 +52,7 @@ function App() {
       }
     }
     fetchData();
-  }, []);
+  }, [dispatch]);
   // console.log("skill",skill);
   // console.log("appcategory",category);
 
