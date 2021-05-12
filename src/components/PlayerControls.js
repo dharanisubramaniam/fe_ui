@@ -2,7 +2,7 @@ import React, { forwardRef } from "react";
 import Grid from "@material-ui/core/Grid";
 import { Button, Container, IconButton, Typography } from "@material-ui/core";
 import BookmarkIcon from "@material-ui/icons/Bookmark";
-import { makeStyles, withStyles } from "@material-ui/core/Styles";
+import { makeStyles, withStyles } from "@material-ui/core/styles";
 import PlayCircleFilledRoundedIcon from "@material-ui/icons/PlayCircleFilledRounded";
 import Forward10Icon from "@material-ui/icons/Forward10";
 import FastRewindIcon from "@material-ui/icons/FastRewind";
