@@ -1,13 +1,13 @@
 import React from "react";
 import "./Row.css";
 import StarHalfRoundedIcon from "@material-ui/icons/StarHalfRounded";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Link } from "react-router-dom";
 import { useStateValue } from "../redux/StateProvider";
 
 
 
 function Row({img,time, title, students, amount,rating}) {
-  const[{updatedTitle},dispatch]=useStateValue()
+  const[dispatch]=useStateValue()
   const updateTitle=(e)=>{
     dispatch({type:"UPDATE_TITLE",updatedTitle:e.target.nextSibling.children[1].innerHTML})
    }
@@ -16,7 +16,7 @@ function Row({img,time, title, students, amount,rating}) {
   return (
     <Link className="row__link" to="/course">
       <div className="row" onClick={(e)=>updateTitle(e)}>
-        <img src={img} className="row__image"></img>
+        <img src={img} className="row__image" alt="row_image"></img>
         <div className="row__details">
           <div className="row__time">
             <p className="row__difficultyIcon"></p>

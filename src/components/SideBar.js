@@ -4,7 +4,7 @@ import  { useStateValue } from "../redux/StateProvider";
 
 
 function SideBar() {
-  const[{category,allCourse},dispatch]=useStateValue();
+  const[{category},dispatch]=useStateValue();
   const toggleAllCourse=()=>{
     dispatch({type:"SET_ALLCOURSE",allCourse:true})
   }

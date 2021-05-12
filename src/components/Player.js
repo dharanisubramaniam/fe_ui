@@ -1,7 +1,7 @@
 import React, { useState, useRef } from "react";
 import ReactPlayer from "react-player";
-import { Button, Container, IconButton, Typography } from "@material-ui/core";
-import { makeStyles, withStyles } from "@material-ui/core/styles";
+import { Container } from "@material-ui/core";
+import { makeStyles } from "@material-ui/core/styles";
 import PlayerControls from "./PlayerControls";
 import "./Player.css";
 import screenfull from "screenfull";
@@ -40,7 +40,7 @@ function Player() {
 
   const [timeDisplayFormat, setTimeDisplayFormat] = useState("normal");
 
-  const { playing, muted, volume, played, seeking } = state;
+  const { playing, muted, volume, played } = state;
 
   const playerRef = useRef(null);
   const playerContainerRef = useRef(null);
@@ -84,7 +84,7 @@ function Player() {
     if (count > 3) {
       controlsRef.current.style.visibility = "hidden";
     }
-    if (controlsRef.current.style.visibility == "visible") {
+    if (controlsRef.current.style.visibility === "visible") {
       count += 1;
     }
     if (!state.seeking) {

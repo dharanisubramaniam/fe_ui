@@ -1,13 +1,11 @@
 import React, { forwardRef } from "react";
 import Grid from "@material-ui/core/Grid";
-import { Button, Container, IconButton, Typography } from "@material-ui/core";
+import { Button, IconButton, Typography } from "@material-ui/core";
 import BookmarkIcon from "@material-ui/icons/Bookmark";
 import { makeStyles, withStyles } from "@material-ui/core/styles";
 import PlayCircleFilledRoundedIcon from "@material-ui/icons/PlayCircleFilledRounded";
-import Forward10Icon from "@material-ui/icons/Forward10";
 import FastRewindIcon from "@material-ui/icons/FastRewind";
 import PauseIcon from "@material-ui/icons/Pause";
-import Replay10Icon from "@material-ui/icons/Replay10Outlined";
 import Slider from "@material-ui/core/Slider";
 import Tooltip from "@material-ui/core/Tooltip";
 import PlayArrowIcon from "@material-ui/icons/PlayArrow";
@@ -17,7 +15,7 @@ import FullscreenIcon from "@material-ui/icons/Fullscreen";
 import Popover from "@material-ui/core/Popover";
 import FastForwardIcon from "@material-ui/icons/FastForward";
 import VolumeOffIcon from "@material-ui/icons/VolumeOff";
-import ArrowRightIcon from "@material-ui/icons/ArrowRight";
+
 
 // style
 

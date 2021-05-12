@@ -5,7 +5,7 @@ import AllCourseRow from "./AllCourseRow";
 
 
 function AllCourse() {
-  const[{category},dispatch]=useStateValue();
+  const[{category}]=useStateValue();
     return (
        <div>
                 {category.map((item)=>(

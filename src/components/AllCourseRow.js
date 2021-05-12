@@ -2,14 +2,12 @@ import React from 'react';
 import { useStateValue } from '../redux/StateProvider';
 import "./MainBody.css";
 import Row from './Row';
-import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
-import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import Carousel from 'react-elastic-carousel'
 
 
 
 function AllCourseRow({id,title}) {
-    const[{course},dispatch]=useStateValue();
+    const[{course}]=useStateValue();
     return (
         <div>
            <div className="course__categoryContainer">

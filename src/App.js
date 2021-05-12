@@ -1,9 +1,9 @@
 import "./App.css";
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import Header from "./components/Header";
 import SideBar from "./components/SideBar";
 import MainBody from "./components/MainBody";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route} from "react-router-dom";
 import CourseHome from "./components/CourseHome";
 import Register from "./components/Register";
 import Login from "./components/Login";
@@ -15,7 +15,7 @@ import Profile from "./components/Profile";
 
 function App() {
 
-  const [{course,category,skill},dispatch] = useStateValue();
+  const [dispatch] = useStateValue();
   useEffect(() => {
     async function fetchData() {
       try {

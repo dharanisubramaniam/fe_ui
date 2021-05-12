@@ -6,7 +6,7 @@ import { useStateValue } from "../redux/StateProvider";
 
 
 function MainBody() {
-  const[{allCourse,updatedCourse},dispatch]=useStateValue();
+  const[{allCourse,updatedCourse}]=useStateValue();
  
   return (
     <div className="mainbody">

@@ -5,7 +5,7 @@ import { useStateValue } from "../redux/StateProvider";
 
 
 function Course() {
-   const [{course,updatedCourse},dispatch]=useStateValue()
+   const [{course,updatedCourse}]=useStateValue()
   console.log(course);
    return ( 
         <div>

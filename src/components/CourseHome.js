@@ -5,7 +5,7 @@ import CourseHome1 from "./CourseHome1";
 
 
 function CourseHome() {
-  const [{ updatedTitle, course }, dispatch] = useStateValue()
+  const [{ updatedTitle, course }] = useStateValue()
   return (
     <div className="coursehome__container">
       {course.map((item) => (
