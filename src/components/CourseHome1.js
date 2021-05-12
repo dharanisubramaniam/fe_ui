@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Thumbnail1 from "../images/StudentsWorkThumbnail1.jpg";
 import Thumbnail2 from "../images/StudentWorkThumbnail2.jpg";
 import Thumbnail3 from "../images/StudentWorkThumbnail3.jpg";
@@ -17,28 +17,22 @@ import { useStateValue } from '../redux/StateProvider';
 
 function CourseHome1({img,desc,thumbnail_desc,title,timing,rating,level,noofstudents,lesson,id,categoryid}) {
    const[{skill}]=useStateValue();
-   skill.map((item)=>{
-     console.log("item",item);
-     item.skills.map((skill)=>{
-       console.log("skill",skill)
-     })
-   })
    
     return (
         <div className="coursehome">
       <Link to="/video">
       <div className="coursehome__thumbnail">
-        <img src={img}></img>
+        <img src={img} alt="coursehome_image"></img>
         <div className="coursehome__playerDesc">
           <h2>{title}</h2>
           <p>
             {thumbnail_desc}
           </p>
 
-          <a href="#" className="coursehome__playerDescFree">
+          <a href="/free" className="coursehome__playerDescFree">
             Free
           </a>
-          <a href="#" className="coursehome__playerDescLink">
+          <a href="/enroll" className="coursehome__playerDescLink">
             Enroll
           </a>
         </div>
@@ -79,10 +73,10 @@ function CourseHome1({img,desc,thumbnail_desc,title,timing,rating,level,noofstud
             </div>
           </div>
           <div className="coursehome__desc2Enroll">
-            <a href="#" className="coursehome__desc2EnrollFree">
+            <a href="/free" className="coursehome__desc2EnrollFree">
               Free
             </a>
-            <a href="#" className="coursehome__desc2EnrollLink">
+            <a href="/enroll" className="coursehome__desc2EnrollLink">
               Enroll
             </a>
           </div>
@@ -133,15 +127,15 @@ function CourseHome1({img,desc,thumbnail_desc,title,timing,rating,level,noofstud
         <h3>Student's Works</h3>
         <div className="coursehome__studentsWork">
           <div className="coursehome__studentsWorkRows">
-            <img src={Thumbnail1} />
+            <img src={Thumbnail1} alt="thumbnail"/>
             <p>Michael Jordan</p>
           </div>
           <div className="coursehome__studentsWorkRows">
-            <img src={Thumbnail2} />
+            <img src={Thumbnail2} alt="thumbnail"/>
             <p>Nina Dobrev</p>
           </div>
           <div className="coursehome__studentsWorkRows">
-            <img src={Thumbnail3} />
+            <img src={Thumbnail3} alt="thumbnail"/>
             <p>Rachael</p>
           </div>
         </div>
@@ -271,10 +265,10 @@ function CourseHome1({img,desc,thumbnail_desc,title,timing,rating,level,noofstud
           amet, consectetur adipiscing elit.
         </p>
         <div className="coursehome__offersLink">
-          <a href="#" className="coursehome__desc2EnrollFree">
+          <a href="/free" className="coursehome__desc2EnrollFree">
             Free
           </a>
-          <a href="#" className="coursehome__desc2EnrollLink">
+          <a href="/enroll" className="coursehome__desc2EnrollLink">
             Enroll
           </a>
         </div>
@@ -287,13 +281,5 @@ function CourseHome1({img,desc,thumbnail_desc,title,timing,rating,level,noofstud
 
 export default CourseHome1;
 
-function Skill({skill}) {
-  console.log("skill in the last",skill);
-  return (
-    <></>
-    // <div className="coursehome__skillsCovered">
-    //   <p>skill</p>      
-    // </div>
-  )
-}
+
 
