@@ -23,7 +23,7 @@
   "proxy": "http://localhost:5000",
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "react-scripts build && scp -r ./build/* dhar@31.220.107.214:/home/dhar/fe_ui",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
