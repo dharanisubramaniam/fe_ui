@@ -9,7 +9,7 @@ on:
   
 
 jobs:
-  build:
+  build-and-deploy:
 
     runs-on: self-hosted
 
@@ -27,3 +27,10 @@ jobs:
     - run: npm i
     - run: npm run build --if-present
     
+    - name: Push to server
+      uses: appleboy/ssh-action@master
+      with:
+          host: 31.220.107.214
+          username: dhar
+          password: Oerrors@2597#
+          script: 'cd /var/www/html && git pull'
