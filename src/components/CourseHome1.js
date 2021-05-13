@@ -15,7 +15,7 @@ import { useStateValue } from '../redux/StateProvider';
 
 
 
-function CourseHome1({img,desc,thumbnail_desc,title,timing,rating,level,noofstudents,lesson,id,categoryid}) {
+function CourseHome1({img,desc,thumbnail_desc,title,timing,rating,level,noofstudents,lesson}) {
    const[{skill}]=useStateValue();
    
     return (
