@@ -16,7 +16,7 @@ import { useSelector, useDispatch } from "react-redux";
 function App() {
 
   const [{},dispatch] = useStateValue();
-  const dispatch = useDispatch();
+  
   useEffect(() => {
     async function fetchData() {
       try {
