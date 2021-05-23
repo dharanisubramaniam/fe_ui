@@ -11,11 +11,12 @@ import axios from "axios";
 import Video from "./components/Video";
 import {useStateValue} from "./redux/StateProvider";
 import Profile from "./components/Profile";
-
+import { useSelector, useDispatch } from "react-redux";
 
 function App() {
 
-  const [dispatch] = useStateValue();
+  const [{},dispatch] = useStateValue();
+  const dispatch = useDispatch();
   useEffect(() => {
     async function fetchData() {
       try {
@@ -44,7 +45,7 @@ function App() {
   useEffect(() => {
     async function fetchData() {
       try {
-        const response = await axios.get("/api/skill");
+        const response = await axios.get( "/api/skill");
         const _skill = response.data
         dispatch({type:"SET_SKILL",skill:_skill})
       } catch (error) {
