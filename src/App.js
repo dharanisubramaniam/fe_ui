@@ -20,7 +20,7 @@ function App() {
   useEffect(() => {
     async function fetchData() {
       try {
-        const response = await axios.get("/api/course"); 
+        const response = await axios.get("http://localhost:5000/api/course"); 
         const _course = response.data
         dispatch({type:"SET_COURSE",course:_course})
       } catch (error) {
@@ -32,7 +32,7 @@ function App() {
   useEffect(() => {
     async function fetchData() {
       try {
-        const response = await axios.get("/api/category");
+        const response = await axios.get("http://localhost:5000/api/category");
         console.log(response.data);
         const _category = response.data
         dispatch({type:"SET_CATEGORY",category:_category})
@@ -45,7 +45,7 @@ function App() {
   useEffect(() => {
     async function fetchData() {
       try {
-        const response = await axios.get( "/api/skill");
+        const response = await axios.get( "http://localhost:5000/api/skill");
         const _skill = response.data
         dispatch({type:"SET_SKILL",skill:_skill})
       } catch (error) {
