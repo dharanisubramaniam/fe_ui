@@ -1,7 +1,7 @@
 import React from "react";
 import "./Header.css";
 import { Link } from "react-router-dom";
-import { useStateValue } from "../redux/StateProvider";
+import { useStateValue } from "../../redux/StateProvider";
 import { Avatar } from '@material-ui/core';
 
 

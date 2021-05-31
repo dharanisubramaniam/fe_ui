@@ -1,20 +1,21 @@
 import React from "react";
-import "./SideBar.css";
-import  { useStateValue } from "../redux/StateProvider";
+import "./HomePageSideBar.css";
+import  { useStateValue } from "../../redux/StateProvider";
 
 
-function SideBar() {
+function HomePageSideBar() {
   const[{category},dispatch]=useStateValue();
   const toggleAllCourse=()=>{
     dispatch({type:"SET_ALLCOURSE",allCourse:true})
   }
   const courseUpdate=(e)=>{
+    // console.log(e);
     dispatch({type:"SET_ALLCOURSE",allCourse:false})
     dispatch({type:"UPDATE_COURSE",updatedCourse:e.target.innerHTML})
     
   }
   return (
-    <div className="sidebar">
+    <div className="homepage__Sidebar">
       <div className="sidebar__category all_courses" onClick={()=>{toggleAllCourse()}}>
         <p>ALL COURSES</p>
       </div>
@@ -31,4 +32,4 @@ function SideBar() {
   );
 }
 
-export default SideBar;
+export default HomePageSideBar;

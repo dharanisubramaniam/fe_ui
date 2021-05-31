@@ -1,13 +1,14 @@
 import React from 'react';
-import { useStateValue } from '../redux/StateProvider';
-import "./MainBody.css";
+import { useStateValue } from '../../redux/StateProvider';
+import "./HomePageBody.css";
 import Row from './Row';
-import Carousel from 'react-elastic-carousel'
+
 
 
 
 function AllCourseRow({id,title}) {
     const[{course}]=useStateValue();
+    // console.log("inside all course",course)
     return (
         <div>
            <div className="course__categoryContainer">
@@ -15,7 +16,6 @@ function AllCourseRow({id,title}) {
                 <button>View All</button>
             </div>
             <div className="allcourse__rowsContainer">
-                <Carousel itemsToShow={3}>
                {course.map((item) => (
                    id===item.category_id && <Row
                        key={item.course_id}
@@ -28,7 +28,6 @@ function AllCourseRow({id,title}) {
                        id={item.course_id}
                    />
                ))}
-               </Carousel>
            </div>
         </div>
     )

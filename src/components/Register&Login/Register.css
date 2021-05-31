@@ -1,5 +1,14 @@
+:root{
+  --background-color: #f8f8f8;
+  --box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  --theme-color: #1fba55;
+  --border-bottom: 2px solid grey;
+  --margin:40px 0px 20px 85px;
+  --font-weight:500;
+}
+
 .register {
-  background-color: #f8f8f8;
+  background-color: var(--background-color);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -9,13 +18,12 @@
 .register__container{
 
   width: 500px;
-  font-family: "Roboto", sans-serif;
   border-radius: 0.75rem;
-  background-color: white;
+  background-color: var(--background-color);
   /* margin-top: auto; */
   color: black;
   margin: 2% 0 auto 0;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: var(--box-shadow);
 }
 
 .register__container > h2 {
@@ -25,10 +33,10 @@
   margin-top:20px;
 }
 .register__signupFree {
-  font-weight: 500;
+  font-weight: var(--font-weight);
   font-size: 1.2rem;
   text-align: center;
-  color: #1fba55;
+  color: var(--theme-color);
 }
 .register__SignUp {
   display: flex;
@@ -38,47 +46,47 @@
   margin: 20px auto;
   background-color: #f4f4f4;
   border-radius: 5px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: var(--box-shadow);
   width: 60%;
 }
 .register__SignUp > p {
-  font-weight: 500;
+  font-weight: var(--font-weight);
   font-size: 1rem;
   margin: 10px 10px;
 }
 .register__signUpIcon {
-  color: #1fba55;
+  color: var(--theme-color);
   margin: 5px;
 }
 .register__container > p {
   text-align: center;
   margin: 10px;
-  color: #1fba55;
+  color: var(--theme-color);
 }
 .register__nameInput {
   display: flex;
   align-items: flex-end;
   justify-content: space-evenly;
-  margin: 40px 0px 20px 85px;
+  margin: var(--margin);
   width:330px;
 }
 .register__firstNameInput {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  border-bottom: 2px solid grey;
+  border-bottom: var(--border-bottom);
   width: 160px;
 }
 .register__Icon {
   font-size: 1.3rem !important;
   margin: 6px;
-  color: #1fba55;
+  color: var(--theme-color);
 }
 .register__lastNameInput {
   display: flex; 
   align-items: center;
   justify-content: center;
-  border-bottom: 2px solid grey;
+  border-bottom: var(--border-bottom);
   padding-bottom:7px;
   
 }
@@ -88,7 +96,7 @@
 }
 ::placeholder {
   color: grey;
-  font-weight: 500;
+  font-weight: var(--font-weight);
   font-size: 1rem;
   
 }
@@ -98,15 +106,15 @@
 .register__emailInput {
   display: flex;
   align-items: center;
-  border-bottom: 2px solid grey;
-  margin: 40px 0px 20px 85px;
+  border-bottom: var(--border-bottom);
+  margin:var(--margin);
   width: 65%;
 }
 .register__passwordInput {
   display: flex;
   align-items: center;
-  border-bottom: 2px solid grey;
-  margin: 40px 0px 20px 85px;
+  border-bottom: var(--border-bottom);
+  margin: var(--margin);
   width: 65%;
 }
 .register__checkbox {
@@ -123,24 +131,23 @@
 }
 input[type="submit"] {
   padding: 5px 15px;
-  background: #1fba55;
+  background: var(--theme-color);
   border: 0 none;
   cursor: pointer;
-  font-family: "Roboto", sans-serif;
   border-radius: 5px;
-  font-weight: 500;
+  font-weight: var(--font-weight);
   font-size: 1rem;
-  color: white;
+  color: var(--background-color);
 }
 input[type="checkbox"] {
-  color: #2699fb;
+  color: var(--theme-color);
   border: 0 none;
 }
 .register__signIn {
   margin: 20px 0px 20px 120px;
 }
 .register__signInLink {
-  color: #1fba55;
+  color: var(--theme-color);
 }
 .register__forgotPassword{
   text-decoration: none;

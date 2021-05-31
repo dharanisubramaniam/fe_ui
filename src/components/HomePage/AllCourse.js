@@ -1,5 +1,5 @@
 import React from "react";
-import { useStateValue } from "../redux/StateProvider";
+import { useStateValue } from "../../redux/StateProvider";
 import AllCourseRow from "./AllCourseRow";
 
 

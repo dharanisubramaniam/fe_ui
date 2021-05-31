@@ -1,61 +1,45 @@
 import "./App.css";
 import React, { useEffect } from "react";
-import Header from "./components/Header";
-import SideBar from "./components/SideBar";
-import MainBody from "./components/MainBody";
-import { BrowserRouter as Router, Switch, Route} from "react-router-dom";
-import CourseHome from "./components/CourseHome";
-import Register from "./components/Register";
-import Login from "./components/Login";
+import Header from "./components/Header/Header";
+import HomePageSideBar from "./components/HomePage/HomePageSideBar";
+import HomePageBody from "./components/HomePage/HomePageBody";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import CoursePage from "./components/CourseHome/CoursePage";
+import Register from "./components/Register&Login/Register";
+import Login from "./components/Register&Login/Login";
 import axios from "axios";
-import Video from "./components/Video";
-import {useStateValue} from "./redux/StateProvider";
-import Profile from "./components/Profile";
-import { useSelector, useDispatch } from "react-redux";
+import VideoPage from "./components/VideoPlayer/VideoPage";
+import { useStateValue } from "./redux/StateProvider";
+import ProfilePage from "./components/Profile/ProfilePage";
 
 function App() {
+  const [{}, dispatch] = useStateValue();
 
-  const [{},dispatch] = useStateValue();
-  
   useEffect(() => {
-    async function fetchData() {
+    const fetchData = async () => {
       try {
-        const response = await axios.get("http://localhost:5000/api/course"); 
-        const _course = response.data
-        dispatch({type:"SET_COURSE",course:_course})
+        const courseres = await axios.get("/api/course");
+        const _course = courseres.data;
+        // console.log(_course,"inside course");
+        dispatch({ type: "SET_COURSE", course: _course });
+
+        const categoryres = await axios.get("/api/category");
+        const _category = categoryres.data;
+        dispatch({ type: "SET_CATEGORY", category: _category });
+
+        const skillres = await axios.get("/api/course/skill");
+        const _skill = skillres.data;
+        dispatch({ type: "SET_SKILL", skill: _skill });
+
+        const overviewres = await axios.get("/api/course/overview");
+        const _overview = overviewres.data;
+        dispatch({ type: "SET_OVERVIEW", overview: _overview });
       } catch (error) {
         console.log(error);
       }
-    }
+    };
     fetchData();
   }, [dispatch]);
-  useEffect(() => {
-    async function fetchData() {
-      try {
-        const response = await axios.get("http://localhost:5000/api/category");
-        console.log(response.data);
-        const _category = response.data
-        dispatch({type:"SET_CATEGORY",category:_category})
-      } catch (error) {
-        console.log(error);
-      }
-    }
-    fetchData();
-  }, [dispatch]);
-  useEffect(() => {
-    async function fetchData() {
-      try {
-        const response = await axios.get( "http://localhost:5000/api/skill");
-        const _skill = response.data
-        dispatch({type:"SET_SKILL",skill:_skill})
-      } catch (error) {
-        console.log(error);
-      }
-    }
-    fetchData();
-  }, [dispatch]);
-  // console.log("skill",skill);
-  // console.log("appcategory",category);
 
   return (
     <Router basename="/courses">
@@ -69,21 +53,21 @@ function App() {
           </Route>
           <Route path="/course">
             <Header />
-            <CourseHome />
+            <CoursePage />
           </Route>
-          <Route path="/video" >
-          <Header />
-          <Video />
-        </Route>
-        <Route path="/profile" >
-          <Header />
-          <Profile />
-        </Route>
+          <Route path="/video">
+            <Header />
+            <VideoPage />
+          </Route>
+          <Route path="/profile">
+            <Header />
+            <ProfilePage />
+          </Route>
           <Route path="/">
             <Header />
-            <div className="body">
-              <SideBar />
-              <MainBody />
+            <div className="homePage">
+              <HomePageSideBar />
+              <HomePageBody />
             </div>
           </Route>
         </Switch>

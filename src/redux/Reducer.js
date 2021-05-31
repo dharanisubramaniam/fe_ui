@@ -6,6 +6,7 @@ export const initialState = {
     updatedTitle:null,
     user:false,
     skill:[],
+    overview:[],
 }
 
 
@@ -26,6 +27,11 @@ export const reducer =(state,action)=>{
                     ...state,
                     skill:action.skill,
                 };
+        case"SET_OVERVIEW":
+                return{
+                        ...state,
+                        overview:action.overview,
+                    };
         case"SET_ALLCOURSE":
             return{
                     ...state,

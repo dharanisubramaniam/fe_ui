@@ -1,12 +1,13 @@
 import React from "react";
-import "./MainBody.css";
+import "./HomePageBody.css";
 import Row from './Row';
-import { useStateValue } from "../redux/StateProvider";
+import { useStateValue } from "../../redux/StateProvider";
+
 
 
 function Course() {
    const [{course,updatedCourse}]=useStateValue()
-  console.log(course);
+  
    return ( 
         <div>
             <div className="course__categoryContainer">

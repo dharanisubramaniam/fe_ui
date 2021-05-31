@@ -1,9 +1,9 @@
-import "./Video.css";
+import "./VideoPage.css";
 import React from "react";
 import VideoSideBar from "./VideoSideBar";
 import Player from "./Player";
 
-function Video() {
+function VideoPage() {
   // const [path, setPath] = useState({});
 
   // useEffect(() => {
@@ -27,4 +27,4 @@ function Video() {
   );
 }
 
-export default Video;
+export default VideoPage;

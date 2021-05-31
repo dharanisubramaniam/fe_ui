@@ -1,12 +1,30 @@
-.coursehome {
-  font-family: "Roboto", sans-serif;
-  color: #12142d;
+:root {
+  --box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  --theme-color: #1db954;
+  --white-color: white;
+  --border-radius: 0.75rem;
 }
+
+.coursehome {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* after thumnail body */
+.coursehome__body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 75%;
+}
+
+/* Thumnail styling */
 
 .coursehome__thumbnail {
   max-height: auto;
   position: relative;
-  color: white;
+  color: var(--white-color);
 }
 
 .coursehome__thumbnail > img {
@@ -31,21 +49,21 @@
 }
 .coursehome__playerDescFree {
   text-decoration: none;
-  color: white;
+  color: var(--white-color);
   font-weight: 600;
   font-size: 1.2rem;
   padding-left: 20px;
 }
 .coursehome__playerDescLink {
   text-decoration: none;
-  color: white;
+  color: var(--white-color);
   font-weight: 500;
   font-size: 1rem;
   line-height: 2.5;
   padding: 0.55rem 1.5rem;
   cursor: pointer;
-  background-color: #1db954;
-  border-radius: 0.75rem;
+  background-color: var(--theme-color);
+  border-radius: var(--border-radius);
   margin-left: 10%;
 }
 .coursehome__playIconContainer {
@@ -55,9 +73,10 @@
 }
 .coursehome__playerIcon {
   font-size: 3.5rem !important;
-  color: white;
+  color: var(--white-color);
 }
 
+/* Description styling */
 .coursehome__description {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -91,13 +110,13 @@
   height: 85px;
   width: 85px;
   margin: 10px 10px;
-  background-color: white;
+  background-color: var(--white-color);
   text-align: center;
-  border-radius: 0.75rem;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
 }
 .coursehome__descBoxParagraph {
-  color: #1db954;
+  color: var(--theme-color);
   padding-top: 30px;
 }
 .coursehome__desc2Boxes > p {
@@ -117,19 +136,21 @@
 }
 .coursehome__desc2EnrollLink {
   text-decoration: none;
-  color: white;
+  color: var(--white-color);
   font-weight: 500;
   font-size: 1rem;
   line-height: 2.5;
   padding: 0.65rem 1.35rem;
   cursor: pointer;
-  background-color: #1db954;
-  border-radius: 0.75rem;
+  background-color: var(--theme-color);
+  border-radius: var(--border-radius);
   margin-left: 10%;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: var(--box-shadow);
 }
+
+/* Skill styling */
 .coursehome__skills {
-  max-width: 75%;
+  min-width: 100%;
 }
 .coursehome__skills > h3 {
   font-weight: 600;
@@ -144,13 +165,17 @@
 
 .coursehome__skillsCovered > p {
   padding: 10px 40px;
-  background-color: white;
-  color: #1db954;
+  background-color: var(--white-color);
+  color: var(--theme-color);
   margin: 10px;
-  border-radius: 0.75rem;
-  box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
 }
 
+/* Overview styling */
+.coursehome__courseOverview {
+  min-width: 100%;
+}
 .coursehome__courseOverview > h3 {
   font-weight: 600;
   padding: 15px 20px;
@@ -163,7 +188,7 @@
   justify-content: space-between;
   align-items: center;
   max-width: 85%;
-  box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: var(--box-shadow);
   border-radius: 0.5rem;
   margin-top: 5px;
 }
@@ -172,6 +197,30 @@
   font-weight: 500;
   font-size: 0.9rem;
 }
+.coursehome__lessonDescription.show {
+  display: block;
+  max-width: 85%;
+  box-shadow: var(--box-shadow);
+  border-radius: 0.5rem;
+  margin: 10px 0px 10px 0px;
+}
+
+.coursehome__lessonDescription > p {
+  margin: 10px;
+  padding: 10px;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.coursehome__lessonDescription.hide {
+  display: none;
+}
+
+/* Studentwork styling */
+.coursehome__studentsWorks {
+  min-width: 100%;
+}
+
 .coursehome__studentsWorks > h3 {
   font-weight: 600;
   padding: 15px 20px;
@@ -187,8 +236,8 @@
 .coursehome__studentsWorkRows {
   width: 300px;
   height: 240px;
-  border-radius: 0.75rem;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
 }
 
 .coursehome__studentsWorkRows > p {
@@ -201,6 +250,8 @@
   border-top-left-radius: 0.75rem;
   border-top-right-radius: 0.75rem;
 }
+
+/* Dot icons */
 .coursehome__dotIcons {
   display: flex;
   justify-content: center;
@@ -212,7 +263,10 @@
   padding: 5px;
   color: grey;
 }
+
+/* Review styling */
 .coursehome__review {
+  min-width: 100%;
   display: flex;
   align-items: center;
 }
@@ -230,20 +284,20 @@
 }
 .coursehome__reviewRowOne {
   max-width: 48%;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  border-radius: 0.75rem;
+  box-shadow: var(--box-shadow);
+  border-radius: var(--border-radius);
   margin: 10px;
 }
 .coursehome__reviewRows {
   max-width: 50%;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  border-radius: 0.75rem;
+  box-shadow: var(--box-shadow);
+  border-radius: var(--border-radius);
   margin: 10px;
 }
 .coursehome__reviewRowThree {
   max-width: 48%;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  border-radius: 0.75rem;
+  box-shadow: var(--box-shadow);
+  border-radius: var(--border-radius);
   margin: 10px;
   float: right;
 }
@@ -260,7 +314,7 @@
   display: inline-block;
 }
 .coursehome__reviewRowStarIcon {
-  color: #1db954;
+  color: var(--theme-color);
 }
 .coursehome__reviewRowProfileIcon {
   float: right;
@@ -271,6 +325,12 @@
 .coursehome__reviewRowStarIconContainer {
   margin: 0px 0px 5px 10px;
 }
+
+/* FAQ styling */
+.coursehome__FAQ {
+  min-width: 100%;
+}
+
 .coursehome__FAQ > h3 {
   text-align: center;
   margin: 50px 0px 40px 0px;
@@ -285,22 +345,24 @@
 .coursehome__FAQParagraph1 {
   max-width: 60%;
   padding: 10px;
-  background-color: #1db954;
-  color: white;
+  background-color: var(--theme-color);
+  color: var(--white-color);
   font-weight: 400;
-  border-radius: 0.75rem;
-  box-shadow: 0 2px 4px 0 #1db954;
+  border-radius: var(--border-radius);
+  box-shadow: 0 2px 4px 0 var(--theme-color);
   margin: 10px;
 }
 .coursehome__FAQParagraph2 {
   width: 60%;
   padding: 10px;
   font-weight: 400;
-  border-radius: 0.75rem;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
   float: right;
   margin: 10px;
 }
+
+/* Offers styling */
 .coursehome__offers {
   margin: 10px 80px 0px 80px;
 }

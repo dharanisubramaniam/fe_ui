@@ -1,15 +1,16 @@
 import React from "react";
-import { useStateValue } from "../redux/StateProvider";
-import CourseHome1 from "./CourseHome1";
+import { useStateValue } from "../../redux/StateProvider";
+import CoursePageHome from "./CoursePageHome";
 
 
 
-function CourseHome() {
-  const [{ updatedTitle, course }] = useStateValue()
+function CoursePage() {
+  const [{ updatedTitle, course }] = useStateValue();
+//  console.log(course);
   return (
-    <div className="coursehome__container">
+    <div className="coursepage__container">
       {course.map((item) => (
-        updatedTitle === item.title && <CourseHome1 key={item.course_id} 
+         updatedTitle === item.title && <CoursePageHome key={item.course_id} 
         img={item.thumbnail}
          desc={item.description} 
          thumbnail_desc={item.thumbnail_desc} 
@@ -19,11 +20,11 @@ function CourseHome() {
          timing={item.timing}
          noofstudents={item.noofstudents}
          lesson={item.lessons}
-         id={item.course_id}
+         courseid={item.course_id}
          categoryid={item.categoryid}/>
       ))}
     </div>
   );
 }
 
-export default CourseHome;
+export default CoursePage;

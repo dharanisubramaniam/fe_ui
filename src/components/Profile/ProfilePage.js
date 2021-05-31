@@ -1,14 +1,14 @@
 import React from 'react';
-import "./Profile.css";
-import img from "../images/JohnDoe.jfif";
+import "./ProfilePage.css";
+// import img from "../images/JohnDoe.jfif";
 import { Avatar } from '@material-ui/core';
 
-function Profile() {
+function ProfilePage() {
     return (
         <div className="profile">
            <div className="profile__firstHalf">
                <div className="profile__imageContainer">
-               <Avatar alt="John Doe" src={img} className="profile__avatar"/>
+               <Avatar alt="John Doe" src="" className="profile__avatar"/>
                 <div className="profile__imageContainerDiv">
                     <p>John Doe</p>
                     <span>Designation</span>
@@ -48,4 +48,4 @@ function Profile() {
     )
 }
 
-export default Profile
+export default ProfilePage;
