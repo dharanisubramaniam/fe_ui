@@ -12,7 +12,7 @@ import VideoPage from "./components/VideoPlayer/VideoPage";
 import { useStateValue } from "./redux/StateProvider";
 import ProfilePage from "./components/Profile/ProfilePage";
 
-const apiUrl = `http://localhost:5000`;
+const apiUrl = `http://31.220.107.214/:5000`;
 
 function App() {
   const [{}, dispatch] = useStateValue();
