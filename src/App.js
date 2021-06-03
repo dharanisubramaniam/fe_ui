@@ -12,26 +12,28 @@ import VideoPage from "./components/VideoPlayer/VideoPage";
 import { useStateValue } from "./redux/StateProvider";
 import ProfilePage from "./components/Profile/ProfilePage";
 
+const apiUrl = `http://localhost:5000`;
+
 function App() {
   const [{}, dispatch] = useStateValue();
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const courseres = await axios.get("/api/course");
+        const courseres = await axios.get(apiUrl + "/api/course");
         const _course = courseres.data;
         // console.log(_course,"inside course");
         dispatch({ type: "SET_COURSE", course: _course });
 
-        const categoryres = await axios.get("/api/category");
+        const categoryres = await axios.get(apiUrl + "/api/category");
         const _category = categoryres.data;
         dispatch({ type: "SET_CATEGORY", category: _category });
 
-        const skillres = await axios.get("/api/course/skill");
+        const skillres = await axios.get(apiUrl + "/api/course/skill");
         const _skill = skillres.data;
         dispatch({ type: "SET_SKILL", skill: _skill });
 
-        const overviewres = await axios.get("/api/course/overview");
+        const overviewres = await axios.get(apiUrl + "/api/course/overview");
         const _overview = overviewres.data;
         dispatch({ type: "SET_OVERVIEW", overview: _overview });
       } catch (error) {
