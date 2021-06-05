@@ -33,9 +33,21 @@ RUN npm run build
 
 FROM nginx:1.17.1-alpine
 
-#COPY --from=build-step /app/build /usr/share/nginx/html
+RUN mkdir -p /var/www/oerrors.com/public_html
 
-WORKDIR /usr/share/nginx/html
+RUN touch /etc/nginx/sites-available/oerrors.com.conf
+
+COPY --from=blah /fe_ui/nginx /etc/nginx/sites-available
+
+RUN nginx -t -c /etc/nginx/sites-available/oerrors.com.conf
+
+RUN ln -s /etc/nginx/sites-available/oerrors.com.conf /etc/nginx/sites-enabled/oerrors.com.conf
+
+RUN systemctl reload nginx
+
+RUN systemctl status nginx
+
+WORKDIR /var/www/oerrors.com/public_html
 
 RUN rm -rf ./*
 
